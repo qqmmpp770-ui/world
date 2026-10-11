@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="css/rudwndnjfem.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/rudwndnjfemvpdlwl.css">
+     <!-- 첫번째 슬라이드 css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/photo.css">
+       <!-- 첫번째 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <!-- 두번쨰 슬라이드 -->
+     <link rel="stylesheet" href="css/slidetwo.css">
+       <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+      <!-- 두번째 Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="world-header">
+        <nav class="nav-menu">
+            <ul class="top-menu-right">
+                <li class="chi-img"><img src="css/경주월드사진/불가사리.png" alt="">캘리포니아비치</li>
+                <li class="dra-img"><img src="css/경주월드사진/드라켄.png" alt="">드라켄밸리</li>
+            </ul>
+            <div class="search">
+                <button class="search-btn"><img src="css/경주월드사진/icon_search.svg" alt="검색"></button>
+                <a href="#" class="login">로그인</a>
+            </div>
+            <div class="lan-drop">
+                <span class="lan-icon"><img src="css/경주월드사진/언어.jpg" alt="lan-icon">한국어</span>
+                <ul class="lan-dropdown">
+                    <li><a class="eng" href="#">english</a></li>
+                    <li><a class="jpn" href="#">日本語</a></li>
+                    <li><a class="chs" href="#">中文(简体)</a></li>
+                    <li><a class="cht" href="#">中文(繁體)</a></li>
+                </ul>
+            </div>
+            <span class="arrow-btn"><img src="css/경주월드사진/아래화살표.jpg" alt="arrow"></span>
+        </nav>
+
+
+        <!-- 헤더젤위 끝 -->
+
+
+        <nav class="top-box">
+            <div class="gnb">
+                <div class="header-two">
+                    <a href="#">
+                        <img src="css/경주월드사진/경주월드로고.png" alt="경주월드로고">
+                    </a>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#">즐길거리</a>
+                        <ul class="dropdown">
+                            <li><a href="#">어트랙션</a></li>
+                            <li><a href="#">공연&행사</a></li>
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">스토어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">요금/우대</a>
+                        <ul class="dropdown">
+                            <li><a href="#">이용요금</a></li>
+                            <li><a href="#">우대혜택</a></li>
+                            <li><a href="#">제휴카드</a></li>
+                            <li><a href="#">연간이용</a></li>
+                            <li><a href="#">기업체</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이용정보</a>
+                        <ul class="dropdown">
+                            <li><a href="#">운영/운휴</a></li>
+                            <li><a href="#">이용꿀팁</a></li>
+                            <li><a href="#">파크이용안내</a></li>
+                            <li><a href="#">편의시설</a></li>
+                            <li><a href="#">교통/주차장</a></li>
+                            <li><a href="#">가이드맵</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="dropdown">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객소리함</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">분실물센터</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-itemtwo">
+                    <a href="#" class="btn-smart">스마트예약</a>
+                    <a href="#" class="btn-dan">단체</a>
+                    <a href="#" class="btn-year">연간</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- 오늘의 인포 -->
+
+
+    <main>
+       <div class="swiper jawook">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"></div>
+        <div class="swiper-slide slide2"></div>
+        <div class="swiper-slide slide3"></div>
+        <div class="swiper-slide slide4"></div>
+        <div class="swiper-slide slide5"></div>
+        <div class="swiper-slide slide6"></div>
+        <div class="swiper-slide slide7"></div>
+      </div>
+      <div class="swiper-button-next jawook-btn-next"></div>
+      <div class="swiper-button-prev jawook-btn-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+     <!-- Initialize Swiper -->
+
+    <script>
+      var swiper = new Swiper('.jawook', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.jawook .swiper-pagination',
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+        speed: 800,
+        autoplay: {
+            delay: 3000,
+        }
+      });
+    </script>
+        <div class="todayinfo">
+            <div class="data">
+                <ul>
+                    <li><img src="css/경주월드사진/인포로고.png" alt="인포"></li>
+                    <li><a href="#"><strong class="todaydata">2026.06.17</strong>파크안내</a></li>
+                </ul>
+            </div>
+            <div class="time">
+                <div class="workingtime">운영시간</div>
+                <div class="alltime">종일권 10:00~18:00</div>
+            </div>
+        </div>
+
+        <!-- info end -->
+        <!-- 즐길거리 -->
+
+        <section class="the-bigbox">
+            <section class="videobox">
+                <div class="inner-inin">
+                    <div class="mainsection">
+                        <div class="slidevideo">
+                            <h2 class="fun">다양하고 가득한 즐길거리</h2>
+                            <ul class="s-v-section">
+                                <li>
+                                    <a href=""><video class="스콜&하티이" autoplay loop muted playsinline>
+                                        <source src="css/경주월드사진/스콜영상.mp4" type="video/mp4"></video></video>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""><video class="드라케엔" autoplay loop muted playsinline>
+                                        <source src="css/경주월드사진/드라켄영상.mp4" type="video/mp4"></video></video>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"><video class="무울배애" autoplay loop muted playsinline>
+                                        <source src="css/경주월드사진/워터영상.mp4" type="video/mp4"></video></video>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- 우대혜택 -->
+
+        <section class="mainsale">
+            <div class="background-big">
+                <div class="saleinner"></div>
+                <h2 class="woodae-say">우대혜택 놓치지말아요</h2>
+                <div class="main-sectionl-liststyle">
+                    <div class="list-section-two">
+                        <ul>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">스마트예약</span>
+                                        </div>
+                                        <b class="tit">홈페이지 회원 우대</b>
+                                        <p class="price">34,400원</p>
+                                        <p class="day"></p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/홈페이지우대.png" alt="woodae"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">제 19회 경주 시민의 날(6/8) 기념 우대</b>
+                                        <p class="price">27,000원</p>
+                                        <p class="day">26.06.08 ~ 26.06.26</p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/소녀.png" alt="소녀"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">호국보훈의 기념 군인 우대</b>
+                                        <p class="price">27,000원</p>
+                                        <p class="day">26.06.08 ~ 26.06.26</p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/군인.png" alt="군인"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">대한항공 우대</b>
+                                        <p class="price">35,000원</p>
+                                        <p class="day">26.04.20 ~ 26.06.30</p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/코리아에어.png" alt="대한항공"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">SRT 우대, 경주로 떠나는 당일치기</b>
+                                        <p class="price">35,000원</p>
+                                        <p class="day">26.04.01 ~ 26.06.30</p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/기차.png" alt="기차"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">에어부산 우대</b>
+                                        <p class="price">35,000원</p>
+                                        <p class="day">26.04.01 ~ 26.06.30</p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/에어부산.png" alt="에어부산"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">현장</span>
+                                        </div>
+                                        <b class="tit">꽃보다 60</b>
+                                        <p class="price">10,000원</p>
+                                        <p class="day"></p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/꽃보다60.png" alt="노년"></div>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="#">
+                                    <div class="txt">
+                                        <div class="small-box">
+                                            <span class="go">스마트예약</span>
+                                        </div>
+                                        <b class="tit">홈페이지 회원 생일 무대</b>
+                                        <p class="price">27,000원</p>
+                                        <p class="day"></p>
+                                    </div>
+                                    <div class="air"><img src="css/경주월드사진/케이크.png" alt="스마트"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bin-box">
+                        <div class="binbin">
+                            <div class="woodae-btn">
+                                <a href="#">우대 더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 어트렉션 -->
+         <section class="main-section-bottom">
+            <div class="inner-in">
+                <h2 class="title">인생 어트랙션이 여기 있어요</h2>
+                <div class="inner-box">
+                    <div class="left-tab">
+                        <div class="inner-twotwo">
+                            <div class="btn">
+                                <button class="thrill">
+                                    <span><img src="css/경주월드사진/탑승.png" alt="기구타는 승객">
+                                        스릴에 흠뻑</span>
+                                </button>
+                                <button class="kid">
+                                    <span><img src="css/경주월드사진/여자아이.png" alt="아이">
+                                        아이와 함께</span>
+                                </button>
+                                <button class="rain">
+                                    <span><img src="css/경주월드사진/우산.png" alt="우산">
+                                        비가 올 때</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-mainbox">
+                        <div class="inner-threethree">
+                            <ul class="swipper-list">
+                                <li class="scall">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/스콜.jpg" alt="스콜&하티">
+                                        </div>
+                                        <strong class="tit">스콜&하티</strong>
+                                        <p>보물을 뺏으려는 스콜과 하티, 그리고 보물을 지키려는 피터! 아시아 최초 싱글 레일 코스터를 타고 다이내믹한 질주를 즐겨보세요!
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="s-h">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/섬머스플래쉬.jpg" alt="섬머린스플래쉬">
+                                        </div>
+                                        <strong class="tit">섬머린스플래쉬</strong>
+                                        <p>국내 최초, 아시아 최고 높이 32m 수상 롤러코스터! 초대형 물폭풍을 일으키며 고공낙하하는 아찔한 스피드와 스릴을 한 방에 느껴보세요! (여름시즌에는 캘리포니아비치와 병행운영으로 운행시간 확인해주세요)
+                                    </a>
+                                </li>
+                                <li class="water-bae">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/물배.jpg" alt="물배">
+                                        </div>
+                                        <strong class="tit">그랜드캐넌</strong>
+                                        <p>아메리카 대륙의 그랜드캐년 협곡 속에 아찔한 급류를 탐험하러 떠나요! 엄청난 물살이 휘몰아치며 신나게 빠져듭니다.</p>
+                                    </a>
+                                </li>
+                                <li class="dra">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/드라캔.jpg" alt="드라켄">
+                                        </div>
+                                        <strong class="tit">드라켄</strong>
+                                        <p>세계 6번째, 국내 최초! 90도 다이브코스터! 63m 높이에서 수직 하강! 2drop까지! 지금껏 느껴볼 수 없던 최강 스릴에 도전하세요!</p>
+                                    </a>
+                                </li>
+                                <li class="pa">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/파에톤.jpg" alt="파에톤">
+                                        </div>
+                                        <strong class="tit">크라크</strong>
+                                        <p><p>그리스 파에톤 신화를 테마로 한 세계 최강의 인버티드 롤러코스터! 초고속 익스트림 스릴을 직접 느껴보세요!</p></p>
+                                    </a>
+                                </li>
+                                <li class="varki">
+                                    <a href="#">
+                                        <div class="photo">
+                                            <img src="css/경주월드사진/발키리.jpg" alt="발키리">
+                                        </div>
+                                        <strong class="tit">발키리</strong>
+                                        <p>앞으로 뒤로 전장을 날아다니는 셔틀 코스터, 발키리! 발키리와 함께 격렬한 전투의 흔적 속으로 떠나보세요!</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-btn">
+                    <a class="btn" href="#">어트랙션 더보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- sns    -->
+
+        <div class="bottom-mainbox-one">
+            <div class="inner">
+                <h2 class="tobe-snsstar">SNS에서도 만날 수 있어요</h2>
+            </div>
+            <!-- Swiper -->
+    <div class="swiper jjawook">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide8"><img src="css/pohtotwo/인스타.png" alt="insta-icon"  class="insta-icon"></div>
+        <div class="swiper-slide slide9"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide10"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide11"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide12"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide13"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide14"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide15"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide16"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide17"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide18"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide19"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide21"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+        <div class="swiper-slide slide22"><img src="css/pohtotwo/인스타.png" alt="insta-icon" class="insta-icon"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+     <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.jjawook', {
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.jjawook .swiper-pagination',
+          clickable: true,
+        },
+        slidesPerView:8,
+        spaceBetween:10,
+        mousewheel: true,
+        speed: 500
+      });
+    </script>
+        </div>
+        <!-- 공지사항!!! -->
+        <section class="notice-box">
+            <div class="inner-in">
+                <h2 class="notice">공지사항 알려드려요</h2>
+                <div class="notice-small-box">
+                    <div class="notice-box-notice">
+                        <div class="time-notice-box">
+                            <h3><a href="#">경주월드 정밀 안전 점검및 향후 대책...</a></h3>
+                            <p>2026.07.16</p>
+                        </div>
+                    </div>
+                    <div class="notice-box-open">
+                        <div class="time-open-box">
+                            <h3><a href="#">잠시 안녕했던 물건, 분실물 센터가 기억해요!</a></h3>
+                            <P>2026.04.09</P>
+                        </div>
+                    </div>
+                    <div class="water-open">
+                        <div class="water-at-open">
+                            <h3><a href="#">어트랙션 대기시간 안내</a></h3>
+                            <P>2026.03.06</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-one">
+            <div class="bottom-under">
+                <div class="bottom-under-under">
+                    <div>
+                        <p class="logo-sul"></p>
+                        <p class="link-link">
+                            <a href="#">경주월드소개</a>
+                            <a href="#">이용약관</a>
+                            <a class="inininfo" href="#">개인정보취급방침</a>
+                            <a href="#">제휴문의</a>
+                            <a href="#">채용</a>
+                            <a href="#">이메일무단수집거부</a>
+                        </p>
+                        <p>
+                            <span class="adress">경주월드 주식회사(경주지점)</span>
+                            <span class="adresss">38117 경주시 보문로 544(천군로)</span>
+                        </p>
+                        <p>
+                            <span class="number">전화: 1544-8765</span>
+                            <span class="numberr">사업자등록번호:505-85-15586</span>
+                            <span class="ceo">대표자 정원기,함영관</span>
+                        </p>
+                        <p class="copyright">ⓒ GyeongjuWorld. All rights reserved.</p>
+                    </div>
+                    <div class="sns-sns">
+                        <div class="sns-section">
+                            <div class="instar"></div>
+                            <div class="yutube"></div>
+                            <div class="tictoc"></div>
+                            <div class="kakao"></div>
+                            <div class="naver"></div>
+                            <div class="x">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>

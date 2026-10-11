@@ -1,0 +1,1731 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif !important;
+    color: #333;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 메인 영역 */
+
+main {
+    padding-top: 100px;
+}
+
+/* 메인 슬라이드 */
+
+.jawook {
+    width: 100%;
+    height: 850px;
+    position: relative;
+}
+
+.jawook .swiper-slide {
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jawook .slide1 {
+    background-image: url(../photo/선넘.png);
+}
+
+.jawook .slide2 {
+    background-image: url(../photo/공연.png);
+}
+
+.jawook .slide3 {
+    background-image: url(../photo/kb.png);
+}
+
+.jawook .slide4 {
+    background-image: url(../photo/대기시간.jpg);
+}
+
+.jawook .slide5 {
+    background-image: url(../photo/비밀자들.jpg);
+}
+
+.jawook .slide6 {
+    background-image: url(../photo/야간개장.jpg);
+}
+
+.jawook .slide7 {
+    background-image: url(../photo/롤코걸롤코맨.jpg);
+}
+
+.jawook-btn-next svg,
+.jawook-btn-prev svg {
+    display: none;
+}
+
+.jawook-btn-next,
+.jawook-btn-prev {
+    width: 66px !important;
+    height: 66px !important;
+    top: 42% !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 50px;
+    opacity: .9;
+}
+
+.jawook-btn-next {
+    background-image: url(../photo/오른쪽.jpg);
+    right: 40px !important;
+}
+
+.jawook-btn-prev {
+    background-image: url(../photo/오른쪽.jpg);
+    transform: scaleX(-1);
+    left: 40px !important;
+}
+
+.jawook .swiper-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateY(-600%);
+    z-index: 1;
+}
+
+.jawook .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: .6;
+    transition: width .3s ease;
+}
+
+.jawook .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+    width: 24px;
+    border-radius: 50px;
+}
+
+/* 헤더전체 */
+.world-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 284px;
+    background: #fff;
+    border-radius: 0 0 38px 38px;
+}
+
+/* 패턴 + 주황색 배경 이미지 */
+.world-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 96px;
+    background-image: url("../photo/menu_bg_img.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 149% 96px;
+    border-radius: 0 0 38px 38px;
+    pointer-events: none;
+}
+
+/* 상단 유틸 메뉴 기존 이미지 다시 표시 */
+
+.world-header .nav-menu {
+    position: relative;
+    z-index: 3;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    width: 87%;
+    height: 38px;
+    margin: 0 auto;
+}
+
+.world-header .top-menu-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 381px;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.world-header .chi-img,
+.world-header .dra-img,
+.world-header .search-btn,
+.world-header .lan-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.world-header .chi-img img,
+.world-header .dra-img img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.world-header .search-btn img {
+    width: 17px;
+    margin-right: 2px;
+}
+
+.world-header .login {
+    color: #555;
+    font-size: 14px;
+}
+
+
+
+.world-header .lan-icon>img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+
+/* 언어 메뉴 기준점 */
+.world-header .lan-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 한국어 + 화살표 버튼 */
+.world-header .language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.world-header .language-symbol {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.world-header .language-arrow {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+    margin-left: 3px;
+}
+
+/* 언어 드롭다운 */
+.world-header .lan-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 1005;
+    width: 80px;
+    margin: 0;
+    padding: 0 0 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 클릭했을 때 표시 */
+.world-header .lan-icon.is-open .lan-dropdown {
+    display: block;
+}
+
+/* 언어 항목 */
+.world-header .lan-dropdown a {
+    display: block;
+    padding: 4px 9px;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.world-header .lan-dropdown a:hover {
+    color: #f87a05;
+}
+
+/* 로고& 메인 메뉴 */
+.world-header .top-box {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* 기존 스크롤 JS의 fixed 클래스 충돌 방지 */
+.world-header .top-box.fixed {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+.world-header .top-box-spacer {
+    display: none !important;
+    height: 0;
+}
+
+.world-header .gnb {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 58px;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.world-header .header-two {
+    flex-shrink: 0;
+}
+
+.world-header .header-two img {
+    display: block;
+    width: 175px;
+    height: auto;
+    transform: translateY(7px);
+}
+
+/* 메인 메뉴 */
+.world-header .menu {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 53px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.world-header .menu>li {
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+.world-header .menu>li>a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #000000;
+}
+
+/* 활성 메뉴 밑줄 */
+
+.world-header .menu>li>a::after {
+    content: "";
+    position: absolute;
+    top: 113%;
+    left: 0;
+    width: 100%;
+    height: 3.8px;
+    background: #ff5145;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.world-header .dropdown li a:hover {
+    color: #f85549;
+    background: transparent;
+}
+
+.world-header .menu>li:first-child>a::after {
+    opacity: 1;
+}
+
+.world-header .menu:hover>li:first-child>a::after {
+    opacity: 0;
+}
+
+.world-header .menu>li:hover>a::after,
+.world-header .menu>li:focus-within>a::after {
+    opacity: 1;
+}
+
+.world-header .menu::before {
+    content: none;
+}
+
+/* 가로형 서브 메뉴 */
+.world-header .dropdown {
+    position: fixed;
+    top: 108px;
+    left: 0;
+    z-index: 1001;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.world-header .menu>li:first-child>.dropdown {
+    display: flex;
+}
+
+.world-header .menu>li:hover>.dropdown,
+.world-header .menu>li:focus-within>.dropdown {
+    display: flex;
+}
+
+.world-header .menu:hover>li:not(:hover)>.dropdown {
+    display: none;
+}
+
+.world-header .dropdown li {
+    flex-shrink: 0;
+}
+
+.world-header .dropdown li a {
+    display: block;
+    padding: 8px 0;
+    color: #222;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* 평소에는 밑줄 없음 */
+.world-header .menu>li>a::after {
+    opacity: 0 !important;
+    background: #f85549;
+}
+
+/* 호버했을 때만 주황색 밑줄 표시 */
+.world-header .menu>li:hover>a::after,
+.world-header .menu>li:focus-within>a::after {
+    opacity: 1 !important;
+}
+
+/* 서브 메뉴 배경 공간 */
+.world-header .header-subnav-bg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 125px;
+    background: transparent;
+    border: none;
+}
+
+/* 예약 버튼 */
+
+.world-header .menu-itemtwo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.world-header .menu-itemtwo a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    border-radius: 23px;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #fff;
+    background: linear-gradient(to right, #f85549, #ff8e38);
+    font-weight: 600;
+}
+
+
+.world-header .menu-itemtwo .btn-dan,
+.world-header .menu-itemtwo .btn-year {
+    color: #383838;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 400;
+}
+
+/* 헤더 운영시간 바 */
+.world-header .header-operating-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    height: 51px;
+    padding: 0 20px;
+    color: #fff;
+    background: transparent;
+    border-radius: 0;
+}
+
+.world-header .header-date {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.world-header .time-time-h {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.world-header .time-time-h span {
+    padding: 4px 12px;
+    color: #fff;
+    font-size: 13px;
+    white-space: nowrap;
+    border: 1px solid #fff;
+    border-radius: 24px;
+}
+
+.world-header .time-time-h strong {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* 메인 콘텐츠 시작 위치 */
+.world-header+main {
+    padding-top: 284px !important;
+}
+
+/*헤더 접힘 */
+.world-header {
+    height: 108px;
+    overflow: visible;
+    transition: none;
+}
+
+/* 호버하면 헤더 전체 펼침 */
+.world-header:hover {
+    height: 284px;
+}
+
+/* 패턴 배경 */
+.world-header::before {
+    opacity: 0;
+}
+
+.world-header:hover::before {
+    opacity: 1;
+}
+
+/* 서브 메뉴 배경: 기본 숨김 */
+.world-header .header-subnav-bg {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.world-header:hover .header-subnav-bg {
+    height: 125px;
+    opacity: 1;
+}
+
+.world-header:hover .header-operating-bar {
+    height: 51px;
+    padding: 0 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 헤더에 마우스를 올리고 메인 메뉴를 선택했을 때만 표시 */
+.world-header:hover .menu>li:hover>.dropdown,
+.world-header:hover .menu>li:focus-within>.dropdown {
+    display: flex !important;
+}
+
+/* 헤더 밖에서는 모든 드롭다운 숨김 */
+.world-header:not(:hover) .menu>li>.dropdown {
+    display: none !important;
+}
+
+/* 본문 시작 위치 */
+.world-header+main {
+    padding-top: 108px !important;
+}
+
+/* 즐길거리에 호버하면 주황색 밑줄 표시 */
+.world-header .menu>li:first-child:hover>a::after,
+.world-header .menu>li:first-child:focus-within>a::after {
+    opacity: 1 !important;
+}
+
+/*드롭다운 가운데 정렬, 글자 강조 */
+.world-header .menu>li>.dropdown {
+    position: fixed !important;
+    top: 108px !important;
+    left: calc(0% - 30px) !important;
+    width: 100% !important;
+    height: 60px !important;
+    padding: 0 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 45px !important;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* 서브 메뉴 글자 */
+.world-header .dropdown li a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #222;
+    white-space: nowrap;
+}
+
+/* 글자 호버 */
+.world-header .dropdown li a:hover {
+    color: #f85549;
+    background: transparent;
+}
+
+/* dropdown li 간격 넓히기 */
+.world-header .dropdown {
+    gap: 60px !important;
+}
+
+/* 즐길거리, 요금/우대 호버 시 서브 메뉴 간격 10% 확대 */
+.world-header .menu>li:nth-child(1):hover>.dropdown,
+.world-header .menu>li:nth-child(1):focus-within>.dropdown,
+.world-header .menu>li:nth-child(2):hover>.dropdown,
+.world-header .menu>li:nth-child(2):focus-within>.dropdown {
+    gap: 66px !important;
+}
+
+/* 헤더가 아래로 부드럽게 펼쳐지도록 설정 */
+.world-header {
+    height: 108px;
+    transition: height 0.45s ease !important;
+}
+
+/* 마우스를 올리면 아래로 확장 */
+.world-header:hover {
+    height: 284px;
+}
+
+/* 패턴 배경 부드럽게 나타나기 */
+.world-header::before {
+    transition: opacity 0.35s ease;
+}
+
+/* 서브 메뉴 영역이 아래로 펼쳐지기 */
+.world-header .header-subnav-bg {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        height 0.45s ease,
+        opacity 0.3s ease;
+}
+
+.world-header:hover .header-subnav-bg {
+    height: 125px;
+    opacity: 1;
+}
+
+/* 운영시간 바도 부드럽게 나타나기 */
+.world-header .header-operating-bar {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        height 0.35s ease,
+        padding 0.35s ease,
+        opacity 0.3s ease;
+}
+
+.world-header:hover .header-operating-bar {
+    height: 51px;
+    padding: 0 20px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 서브 메뉴도 아래에서 부드럽게 나타나기 */
+.world-header .menu>li>.dropdown {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.35s ease;
+}
+
+.world-header:hover .menu>li:hover>.dropdown,
+.world-header:hover .menu>li:focus-within>.dropdown {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 호버 시 나타나는 서브 메뉴 위치 아래로 이동 */
+.world-header .menu>li>.dropdown {
+    top: 120px !important;
+}
+
+/* 날짜와 운영시간을 위로 이동 */
+.world-header .header-date,
+.world-header .time-time-h {
+    transform: translateY(-9px);
+}
+
+/*\오른쪽 끝과 아이콘 간격 조정 */
+.world-header .nav-menu {
+    width: 85% !important;
+}
+
+/* 로고 크기 미세 확대 */
+.world-header .header-two img {
+    width: 185px !important;
+}
+
+/* 메인 메뉴를 화면 정중앙에 정렬 */
+.world-header .menu {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    gap: 49px !important;
+    transform: translateX(-50%) !important;
+}
+
+.world-header .menu>li>a {
+    height: 70px !important;
+    font-size: 20px !important;
+}
+
+/* 활성 밑줄을 메뉴 글자 아래 경계에 맞춤 */
+.world-header .menu>li>a::after {
+    top: 73px !important;
+    bottom: 0 !important;
+}
+
+/* 서브 메뉴 위치와 가운데 정렬 */
+.world-header .menu>li>.dropdown {
+    top: 80px !important;
+    left: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+}
+
+/* 서브 메뉴 공간 높이를 보정해 운영시간 바의 세로 위치 유지 */
+.world-header:has(.menu > li:hover) .header-subnav-bg,
+.world-header:has(.menu > li:focus-within) .header-subnav-bg {
+    height: 135px !important;
+}
+
+/* 패턴 반복 위치를 참고 이미지와 맞춤. 크기/높이는 유지 */
+.world-header::before {
+    background-position: calc(50% - 12px) bottom !important;
+}
+
+/* 헤더 빈 공간에 호버해도 펼쳐지지 않음 */
+.world-header:hover {
+    height: 108px !important;
+}
+
+/* 네 개의 메인 메뉴 항목에 호버했을 때만 펼침 */
+.world-header:has(.menu > li:hover),
+.world-header:has(.menu > li:focus-within) {
+    height: 284px !important;
+}
+
+/* 패턴 배경: 메뉴 항목 호버 시에만 표시 */
+.world-header:hover::before {
+    opacity: 0 !important;
+}
+
+.world-header:has(.menu > li:hover)::before,
+.world-header:has(.menu > li:focus-within)::before {
+    opacity: 1 !important;
+}
+
+/* 서브 메뉴 배경 */
+.world-header:hover .header-subnav-bg {
+    height: 0 !important;
+    opacity: 0 !important;
+}
+
+.world-header:has(.menu > li:hover) .header-subnav-bg,
+.world-header:has(.menu > li:focus-within) .header-subnav-bg {
+    opacity: 1 !important;
+}
+
+.world-header:has(.menu > li:hover) .header-operating-bar,
+.world-header:has(.menu > li:focus-within) .header-operating-bar {
+    padding: 0 20px !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* 해당 메뉴의 서브 메뉴만 표시 */
+.world-header .menu>li>.dropdown {
+    display: none !important;
+}
+
+/* 스크롤 상태에서만 메뉴 호버 시 헤더 높이 250px */
+.world-header.is-scrolled:has(.menu > li:hover),
+.world-header.is-scrolled:has(.menu > li:focus-within) {
+    height: 250px !important;
+}
+
+.world-header .menu>li:hover>.dropdown,
+.world-header .menu>li:focus-within>.dropdown {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* 스크롤 시 상단 유틸 메뉴가 위로 접힘 */
+.world-header .nav-menu {
+    transition: height 0.25s ease, opacity 0.2s ease;
+    overflow: hidden;
+}
+
+/* 스크롤 상태 */
+.world-header.is-scrolled {
+    height: 40px !important;
+}
+
+/* 유틸 메뉴 숨기기 */
+.world-header.is-scrolled .nav-menu {
+    height: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* 운영시간 바 위치 고정 및 기본 숨김 */
+.world-header .header-operating-bar {
+    position: absolute !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    z-index: 5 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    background: transparent !important;
+    overflow: visible !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.25s ease !important;
+}
+
+/* 메인 메뉴에 호버할 때만 운영시간 표시 */
+.world-header:has(.menu > li:hover) .header-operating-bar,
+.world-header:has(.menu > li:focus-within) .header-operating-bar {
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 20px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* 날짜와 시간 글자 위치 고정 */
+.world-header .header-date,
+.world-header .time-time-h {
+    flex-shrink: 0;
+    transform: translateY(-5px);
+}
+
+/* 언어 드롭다운이 잘리지 않도록 수정 */
+.world-header .nav-menu {
+    overflow: visible !important;
+}
+
+/* 스크롤하면 상단 메뉴 숨김 유지 */
+.world-header.is-scrolled .nav-menu {
+    overflow: hidden !important;
+}
+
+/* 언어 드롭다운 상단 점선 */
+.world-header .lan-dropdown {
+    border-top: 1px dotted #999;
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+}
+
+
+/* 메인비주얼 */
+
+main .a img {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+}
+
+.todayinfo {
+    background: rgba(255, 251, 251, 0.5);
+    backdrop-filter: blur(9px);
+    color: black;
+    display: flex;
+    position: relative;
+    bottom: 140px;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 11px 2.5%;
+    overflow: hidden;
+    border-radius: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    box-shadow: 0 0 12px -6px rgba(0, 0, 0, 0.1);
+}
+
+.todaydata {
+    font-size: 17px;
+    padding-right: 3px;
+}
+
+.data ul {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.data img {
+    width: 60px;
+}
+
+.time {
+    display: flex;
+    gap: 5px;
+}
+
+.time .workingtime {
+    background: #fff;
+    border-radius: 50px;
+    border: 1px solid #dfdfdf;
+    padding: 3px 10px 3px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.alltime {
+    padding: 5px 12px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* 즐길거리 */
+.the-bigbox {
+    display: block;
+    width: 100%;
+}
+
+.inner-inin {
+    height: 900px;
+}
+
+.mainsection {
+    display: block;
+}
+
+.the-bigbox .videobox .inne .fun {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+
+.slidevideo {
+    padding: 0 120px;
+}
+
+.fun {
+    font-size: 56px;
+}
+
+.s-v-section {
+    max-width: 1670px;
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+    position: relative;
+}
+
+.s-v-section li {
+    width: 540px;
+    margin-right: 24px;
+    min-width: 0;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.s-v-section li img {
+    width: 100%;
+}
+
+
+/* 우대혜택 */
+
+.mainsale {
+    background: url(../photo/백그라운드1.jpg) no-repeat;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    width: 100%;
+    background-position: center top;
+}
+
+.background-big {
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+.saleinner {
+    margin: 0 auto;
+}
+
+
+.woodae-say {
+    font-size: 54px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    letter-spacing: -2px;
+
+}
+
+.main-sectionl-liststyle {
+    margin-top: 64px;
+}
+
+.list-section-two ul {
+    height: 904px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: -16px -12px;
+}
+
+.main-sectionl-liststyle .list-section-two .list {
+    width: 397px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+
+}
+
+.list-section-two ul li {
+    margin: 16px 12px;
+}
+
+.main-sectionl-liststyle .list-section .list a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.txt {
+    padding: 30px 25px;
+}
+
+.go {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    background-color: #000000;
+    border: #000000;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.su {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    background-color: #f85549;
+    border: #f85549;
+    border-radius: 50px;
+    color: #fff;
+}
+
+
+.air img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.price {
+    color: #f85549;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.day {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+
+
+.bin-box {
+    padding: 20px 20px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 45%;
+    height: 40px;
+}
+
+.woodae-btn a {
+    background-color: #fff;
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 20px 45px;
+    color: black;
+}
+
+
+/* 어트랙션 */
+
+.main-section-bottom {
+    width: 100%;
+    height: 1290px;
+    background-image: url(../photo/드백그라운2.jpg);
+    background-repeat: no-repeat;
+    padding: 140px 0 120px;
+    background-position: center top;
+    background-size: cover;
+    transition: background-image .3s;
+}
+
+.main-section-bottom.thrill-active {
+    background-image: url(../photo/드백그라운2.jpg);
+}
+
+.main-section-bottom.kid-active {
+    background-image: url(../photo/background-third.jpg);
+}
+
+.main-section-bottom.rain-active {
+    background-image: url(../photo/background-sec.jpg);
+}
+
+.main-section-bottom .inner-in {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+
+.inner-in .title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    width: 350px;
+    letter-spacing: -5px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    bottom: 1072.120px;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.inner-box {
+    margin-top: 0;
+    display: flex;
+}
+
+.left-tab {
+    width: 500px;
+    gap: 10px;
+
+}
+
+.left-tab .inner-twotwo {
+    position: relative;
+
+}
+
+.inner-twotwo .btn {
+    margin-top: 188px;
+    height: 168px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content[data-tab="thrill"] {
+    display: block;
+}
+
+
+.thrill,
+.kid,
+.rain {
+    width: 340px;
+    height: 56px;
+    display: block;
+    font-weight: 480;
+    font-size: 18px;
+    padding: 0 24px;
+    height: 56px;
+    color: #fff;
+    text-align: left;
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+
+.thrill.active,
+.kid.active,
+.rain.active {
+    background-color: #f85549;
+
+}
+
+.thrill.active img,
+.kid.active img,
+.rain.active img {
+    filter: brightness(0) invert(1);
+    /* 필터 브라이트네스로 검게 만든다음, 인버스로 뒤집어서 흰색으로 만들기ㅎㅎ */
+}
+
+.inner-threethree {
+    width: 1256px;
+    height: 990px;
+    display: block;
+}
+
+.inner-threethree .swipper-list {
+    height: 89%;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.scall,
+.s-h,
+.dra,
+.varki,
+.water-bae,
+.pa,
+.wizard,
+.magic-bike,
+.moonlight,
+.carousel,
+.ballhouse,
+.bouncespin,
+.s-h-two,
+.magic-bike-two,
+.water-bae-two,
+.moonlight-two,
+.rapids,
+.carousel-two {
+    letter-spacing: -1px;
+    width: 394.656px;
+    height: 308.312px;
+    margin: 24px 10px;
+    display: block;
+    color: #fff;
+    font-size: 17px;
+}
+
+.tit {
+    font-size: 22px;
+}
+
+.photo {
+    margin-bottom: 18px;
+}
+
+.swipper-list img {
+    width: 100%;
+    border: 0;
+    border-radius: 10%;
+}
+
+.last-btn {
+    height: 67px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.last-btn .btn {
+    height: auto;
+    padding: 20px 32px;
+    background-color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 50px;
+    color: black;
+    min-width: 180px;
+}
+
+/* 버튼 문구만 2px 위로 이동 */
+.main-section-bottom .inner-twotwo .btn .btn-label {
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+/* SNS */
+
+/* 두번쨰 슬라이드 */
+
+.jjawook {
+    width: 100%;
+    height: 225px;
+}
+
+.jjawook .swiper-wrapper {
+    padding-top: 15px;
+}
+
+.jjawook .swiper-slide {
+    width: 220px;
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+}
+
+.jjawook .swiper-pagination {
+    display: none;
+}
+
+.jjawook .insta-icon {
+    position: absolute !important;
+    top: -16px !important;
+    left: 15px !important;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+}
+
+
+.jjawook .slide8 {
+    background-image: url(../photo/제휴우대.jpg);
+}
+
+.jjawook .slide9 {
+    background-image: url(../photo/kb페이.jpg);
+}
+
+.jjawook .slide10 {
+    background-image: url(../photo/댄싱버스킹.jpg);
+}
+
+.jjawook .slide11 {
+    background-image: url(../photo/캘포비치.jpg);
+}
+
+.jjawook .slide12 {
+    background-image: url(../photo/여름디저트.jpg);
+}
+
+.jjawook .slide13 {
+    background-image: url(../photo/여우.jpg);
+}
+
+.jjawook .slide14 {
+    background-image: url(../photo/키캡.jpg);
+}
+
+.jjawook .slide15 {
+    background-image: url(../photo/오리.jpg);
+}
+
+.jjawook .slide16 {
+    background-image: url(../photo/썸머올킬.jpg);
+}
+
+.jjawook .slide17 {
+    background-image: url(../photo/행운의부기.jpg);
+}
+
+.jjawook .slide18 {
+    background-image: url(../photo/롤코.jpg);
+}
+
+.jjawook .slide19 {
+    background-image: url(../photo/포토.jpg);
+}
+
+.jjawook .slide20 {
+    background-image: url(../photo/관람차.jpg);
+}
+
+.jjawook .slide21 {
+    background-image: url(../photo/지금딱.jpg);
+}
+
+.jjawook .slide22 {
+    background-image: url(../photo/관람차보라.jpg);
+}
+
+/* 두번째슬라이드 */
+
+.bottom-mainbox-one {
+    padding: 140px 0;
+    height: 666.188px;
+
+}
+
+.bottom-mainbox-one .inner {
+    max-width: 2160px;
+    margin: 0 auto;
+    padding: 0 120px;
+
+}
+
+.tobe-snsstar {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 85px;
+}
+
+.main-slide {
+    margin-top: 64px;
+    height: 255px;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.slidebox-up {
+    font: 18px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 255px;
+    margin-left: 0;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.slide-container {
+    margin: 0;
+}
+
+
+/* 공지사항 */
+
+.notice-box {
+    padding: 140px 0;
+    background-color: #f8f9fa;
+    width: 100%;
+}
+
+.inner-in {
+    max-width: 1900px;
+    width: 100%;
+    height: 259.417px;
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+.notice {
+    font-size: 55px;
+    margin-bottom: 8px;
+    width: 1581.330px;
+    height: 67.188px;
+}
+
+
+.notice-small-box {
+    height: 128.229px;
+    margin: 64px -2px 0 -2px;
+    display: flex;
+    justify-content: center;
+}
+
+.notice-box-notice,
+.notice-box-open,
+.water-open {
+    margin-top: 4px;
+    width: 553.104px;
+    height: 124.229px;
+    padding: 0 2px;
+}
+
+.time-notice-box,
+.time-open-box,
+.water-at-open {
+    width: 540px;
+    height: 100%;
+    position: relative;
+    margin: 0.2rem;
+    padding: 32px 16px 16px 16px;
+    flex-direction: column;
+    background-color: #fff;
+    border: #575656;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    height: 31.458px;
+    margin: 0 8px;
+    padding: 0 9px;
+    font-size: 22px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    margin-bottom: 0rem;
+    padding: 0 0.5rem;
+
+}
+
+.time-notice-box p,
+.time-open-box p,
+.water-at-open p {
+    height: 31.458px;
+    margin: 0 8px;
+    padding: 8px 16px 0 16px;
+    line-height: 1.8rem;
+    color: #adb5bd;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -1px;
+}
+
+.time-notice-box img,
+.time-open-box img,
+.water-at-open img {
+    width: 7px;
+    height: 11px;
+    position: absolute;
+    top: 47%;
+    right: 24px;
+}
+
+
+footer {
+    height: 350px;
+    background: #ffffff;
+    color: #000000;
+    border-top: 2px solid black;
+    border-top: 2px solid rgb(233, 236, 239);
+}
+
+#footer-one {
+    width: 1600px;
+    height: 282.500px;
+    padding: 30px 0 40px 0;
+    margin: 0 145px;
+}
+
+.bottom-under {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bottom-under-under {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 252.500px;
+}
+
+
+.logo-sul {
+    width: 645px;
+    height: 47px;
+}
+
+.logo-sul {
+
+    background-image: url(../photo/경주월드로고마침.png);
+    background-repeat: no-repeat;
+}
+
+
+
+.link-link {
+    margin: 35px 0;
+    width: 700px;
+    height: 27px;
+}
+
+.link-link a {
+    margin-right: 13px;
+    margin-bottom: px;
+}
+
+.inininfo {
+    font-weight: 600;
+}
+
+.adress,
+.adresss,
+.number,
+.numberr,
+.ceo {
+    color: #555;
+}
+
+.adresss,
+.numberr,
+.ceo {
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+
+.copyright {
+    margin-top: 20px;
+    color: #777;
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sns-sns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 170px;
+    width: 100%;
+    height: 110px;
+}
+
+.sns-section {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+
+.instar {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/instar.png);
+}
+
+
+.yutube {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/유툽.png);
+}
+
+.tictoc {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/틱톡.png);
+}
+
+.kakao {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/카카오.png);
+}
+
+.naver {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/네이버블로그.png);
+}
+
+.x {
+    width: 35px;
+    height: 35px;
+    background-image: url(../photo/x.png);
+}
